@@ -1,0 +1,25 @@
+<form (ngSubmit)="addNewTask(taskForm)" #taskForm="ngForm">
+  <div class="mb-3">
+    <label for="txbTitle" class="form-label"><b>T&iacute;tulo:</b></label>
+    <input type="text" class="form-control" placeholder="Comprar leche" 
+    id="txtTitle" name="title" ngModel/>
+  </div>
+  <div class="mb-3">
+    <label for="txbDescription" class="form-label"><b>Descripci&oacute;n:</b></label>
+    <textarea class="form-control" 
+    rows="2" cols="50" maxlength="100" placeholder="Para el desayuno del fin de semana."
+    id="txbDescription" name="description" ngModel></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="txbPriority" class="form-label"><b>Prioridad</b></label>
+    <input type="number" class="form-control" min="1" max="10" maxlength="2"
+    id="txbPriority" name="priority" ngModel/>
+  </div>
+  <div class="mb-3">
+    <button id="btnAdd"   type="submit" class="btn btn-outline-primary">Agregar</button>
+    <button id="btnClean" type="button" class="btn btn-outline-secondary">Limpiar</button>
+  </div>
+</form>
+<pre>
+  {{ taskForm.value| json}}
+</pre>

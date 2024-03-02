@@ -1,0 +1,17 @@
+<li [id]="item?.Id" class="list-group-item 
+list-group-item-action 
+d-flex justify-content-between 
+align-items-center">
+
+<span class="badge bg-secondary rounded-pill">{{ item?.Priority}}</span>
+
+<span>{{ item?.Title }}</span>
+
+<span>{{ item?.Description }}</span>
+
+<button class="btn btn-danger" (click)="eliminar($event)">
+    <span class="fa-solid fa-trash"></span>
+    <span style="padding-left: 10px;">Eliminar</span>
+</button>
+
+</li>
